@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Rodrigo M.",
+  "author": "Rodrigo M. rodrigo@mariachi.io",
   "license": "ISC",
   "dependencies": {
     "bootbot": "^1.0.15",
