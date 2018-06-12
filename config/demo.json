@@ -1,0 +1,6 @@
+{
+    "_comment":"Cambia le nombre de este archivo a default.json, y sustituye los token por los tuyos",
+    "accessToken": "TOKEN DE LA PAGINA",
+    "verifyToken": "TOKEN PERSONAL",
+    "appSecret": "TOKEN DE LA APLICACION"
+}
