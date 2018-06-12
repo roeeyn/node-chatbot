@@ -101,4 +101,5 @@ Si tu bot no responde, prueba con lo siguiente:
  * Asegúrate que la aplicación esté suscrita a tu página (Paso 6).
   
 ### Pasos siguientes:
+* En este repositorio hay otra rama que se llama `moreFeatures`. En ella se encuentra el código modificado con más ejemplos de lo que puede hacer Bootbot para Messenger.
 * Como habrás notado, cada que terminas ngrok, tu bot "muere". Esto se debe a que tu computadora está sirviendo como servidor. Para solucionar este problema puedes meter tu aplicación a un contenedor con Docker, y subir dicho contenedor a alguna plataforma como Heroku. Así se mantendrá "vivo" todo el tiempo tu bot.
