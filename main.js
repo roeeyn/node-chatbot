@@ -126,4 +126,36 @@ bot.hear(['stalker'], (payload, chat) => {
 
 });
 
+//Conversation Example
+bot.hear('conversation', (payload, chat) => {
+
+    const askName = (convo) => {
+        convo.ask(`Cuál es tu nombre?`, (payload, convo) => {
+            const text = payload.message.text;
+            convo.set('name', text);
+            convo.say(`Hola ${text}! :)`).then(() => askFavoriteFood(convo));
+        });
+    };
+
+    const askFavoriteFood = (convo) => {
+        convo.ask(`Cuál es tu comida favorita?`, (payload, convo) => {
+            const text = payload.message.text;
+            convo.set('food', text);
+            convo.say(`${text} suena sabroso.`).then(() => sendSummary(convo));
+        });
+    };
+
+    const sendSummary = (convo) => {
+        convo.say(`Ok, entonces esto es lo que sé de ti:
+	      - Nombre: ${convo.get('name')}
+	      - Comida Favorita: ${convo.get('food')}`);
+        convo.end();
+    };
+
+    chat.conversation((convo) => {
+        askName(convo);
+    });
+
+});
+
 bot.start();
