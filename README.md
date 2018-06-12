@@ -54,6 +54,12 @@ git clone https://github.com/RN3r1/NodeChatbot.git
 
 * Puedes obtener el `appSecret` desde el dashboard de tu aplicación de Facebook, Configuración, Información Básica y del lado derecho estará el apartado de *clave secreta de tu aplicación*
 
+* Antes de ejecutar el código debemos de instalar todas las dependencias necesarias para el proyecto. Eso lo podemos hacer con:
+
+```
+npm install
+```
+
 * Por último para ejecutar el código, en la **carpeta raíz del proyecto**, ejecutamos:
 ```
 node main.js
