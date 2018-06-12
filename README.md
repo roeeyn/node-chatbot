@@ -41,7 +41,7 @@ Dentro de dicho panel seleccionaremos la clase de paǵina que desees, y la nombr
 ### 3. Vincula tu página de Facebook y tu aplicación
 * Dentro del dashboard de configuración de Messenger (Generación de Identificador), **seleccionamos nuestra página** de las opciones. Tal vez te salga un cuadro de confirmación que te sugiera enviar a revisión. Sólo tenemos que seleccionar **Continuar como *tu usuario***, y después te pedirá permisos para que tu aplicación pueda administrar tu página. De manera similar habrá que aceptar la ventana. Si todo salió bien se generará el **token de acceso de la página**. Es importante tenerlo a la mano. 
 
-### 4. Escribe el código
+### 4. Ejecuta el código
 * Si no has clonado este repo, hazlo ahora con el siguiente comando
 
 ``` 
@@ -50,7 +50,16 @@ git clone https://github.com/RN3r1/NodeChatbot.git
 
 * Una vez clonado, debemos de ir al archivo `demo.json`, y cambiarle el nombre por `default.json`, modificando también el parámetro de `accessToken` que obtuvimos previamente.
 
-* Asimismo debemos de escribir en `verifyToken` el token que nosotros queramos, yo escribí "MiToken". 
+* Asimismo debemos de escribir en `verifyToken` el token que nosotros queramos, yo escribí "MiToken".
+
+* Puedes obtener el `appSecret` desde el dashboard de tu aplicación de Facebook, Configuración, Información Básica y del lado derecho estará el apartado de *clave secreta de tu aplicación*
+
+* Por último para ejecutar el código, en la **carpeta raíz del proyecto**, ejecutamos:
+```
+node main.js
+```
+
+y te deberá imprimir un mensaje de que el webhook ya está corriendo adecuadamente.
 
 ### 5. "Súbelo" a internet
 * Como sabemos, el servidor de Node se levantó en un ambiente local, pero Facebook requiere de un servidor con certificado de seguridad y protocolo https. Para resolver este tema usaremos **Ngrok**. Éste hace un tunneling a través de http, a un puerto designado. Esto quiere decir que tu puerto en el que se montó Node (en este caso el 3000), quedará expuesto para que cualquiera le pueda hacer peticiones. Para ejecutar ngrok los comandos varían con cada sistema operativo, pero debera ser un comando similar a 
